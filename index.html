@@ -1,104 +1,160 @@
-here<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MET Global Industries</title>
+<title>MET Global Industries | Engineering the Future</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
-body{background:#f4f6f9;color:#222}
-header{background:#0a1f44;color:#fff;padding:40px 10%;text-align:center}
-header h1{font-size:40px;letter-spacing:2px}
-header p{margin-top:10px;font-size:18px;opacity:.9}
-nav{background:#122b63;padding:15px 10%;display:flex;justify-content:space-between;align-items:center}
-nav a{color:#fff;text-decoration:none;margin:0 15px;font-weight:bold}
-nav a:hover{color:#00c3ff}
-.hero{padding:80px 10%;background:linear-gradient(to right,#0a1f44,#163b85);color:#fff;text-align:center}
-.hero h2{font-size:36px;margin-bottom:20px}
-.hero p{font-size:18px;max-width:900px;margin:auto;line-height:1.6}
-.section{padding:70px 10%}
-.section h2{font-size:30px;margin-bottom:20px;color:#0a1f44}
-.section p{line-height:1.7;margin-bottom:15px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px}
-.gallery img{width:100%;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.2)}
-.card-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:30px}
-.card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:.3s}
-.card:hover{transform:translateY(-8px)}
-.investor-btn{display:inline-block;margin-top:20px;padding:15px 25px;background:#0a1f44;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold}
-.investor-btn:hover{background:#163b85}
-footer{background:#0a1f44;color:#fff;text-align:center;padding:30px 10%;margin-top:50px}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);justify-content:center;align-items:center}
-.modal-content{background:#fff;padding:40px;border-radius:12px;width:90%;max-width:600px}
-.close{float:right;font-size:20px;cursor:pointer}
-.contact-box{margin-top:20px;background:#f0f2f5;padding:20px;border-radius:8px}
-</style>
-</head>
-<body><header>
-<h1>MET Global Industries</h1>
-<p>Engineering Innovation • Sustainable Manufacturing • Global Vision</p>
-</header><nav>
-<div><a href="#">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#investors">Investors</a><a href="#contact">Contact</a></div>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#f4f7fb;color:#1a1a1a}
+
+/* NAVIGATION */
+nav{position:fixed;width:100%;top:0;left:0;background:#0b1d3a;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000}
+nav .logo{color:#fff;font-size:22px;font-weight:700;letter-spacing:1px}
+nav ul{display:flex;list-style:none}
+nav ul li{margin-left:25px}
+nav ul li a{text-decoration:none;color:#fff;font-weight:500;transition:.3s}
+nav ul li a:hover{color:#00c3ff}
+
+/* HERO */
+.hero{height:100vh;background:linear-gradient(rgba(11,29,58,.85),rgba(11,29,58,.85)),url('met1.jpg');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:0 10%}
+.hero h1{font-size:52px;font-weight:800;margin-bottom:20px}
+.hero p{max-width:900px;font-size:20px;line-height:1.8;margin-bottom:30px}
+.hero .btn{padding:15px 30px;background:#00c3ff;border:none;border-radius:8px;color:#fff;font-weight:600;text-decoration:none;margin:10px;display:inline-block}
+.hero .btn:hover{background:#009ed1}
+
+section{padding:100px 10%}
+section h2{font-size:36px;margin-bottom:25px;color:#0b1d3a;font-weight:700}
+section p{line-height:1.8;margin-bottom:18px;font-size:16px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
+.about-box{background:#fff;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:40px}
+.gallery img{width:100%;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,.2)}
+
+/* PRODUCTS */
+.products{background:#eef3f9}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
+.product-card{background:#fff;padding:30px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,.08);transition:.4s}
+.product-card:hover{transform:translateY(-10px)}
+.product-card i{font-size:30px;color:#0b1d3a;margin-bottom:15px}
+
+/* INVESTORS */
+.investor-section{background:linear-gradient(to right,#0b1d3a,#132c57);color:#fff}
+.investor-section h2{color:#fff}
+.investor-content{max-width:1000px;margin:auto;text-align:center}
+.investor-btn{margin-top:30px;padding:15px 30px;background:#00c3ff;border-radius:8px;color:#fff;text-decoration:none;font-weight:600;display:inline-block}
+.investor-btn:hover{background:#009ed1}
+
+/* MODAL */
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);justify-content:center;align-items:center;z-index:2000}
+.modal-content{background:#fff;color:#000;padding:40px;border-radius:15px;max-width:700px;width:90%;max-height:90vh;overflow-y:auto}
+.close{float:right;font-size:22px;cursor:pointer}
+
+/* CONTACT */
+.contact-box{background:#fff;padding:30px;border-radius:15px;box-shadow:0 10px 20px rgba(0,0,0,.08);margin-top:30px}
+
+footer{background:#0b1d3a;color:#fff;text-align:center;padding:40px 10%;margin-top:60px}
+
+@media(max-width:768px){
+.hero h1{font-size:36px}
+}
+</style></head>
+<body><nav>
+<div class="logo">MET Global Industries</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#investors">Investors</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav><section class="hero">
-<h2>Building Industrial Excellence for the Future</h2>
-<p>MET Global Industries is a forward-thinking industrial and manufacturing enterprise focused on delivering high-performance engineered products with durability, innovation, and sustainability at its core. Our mission is to transform raw potential into measurable industrial value.</p>
-</section><section class="section" id="about">
-<h2>About Our Company</h2>
+<h1>Engineering Innovation. Building Industrial Strength.</h1>
+<p>MET Global Industries is a high-performance industrial manufacturing enterprise focused on engineered composite solutions, advanced material development, and scalable production systems. We integrate research-driven precision with global market strategy to create durable, high-impact industrial products.</p>
+<a href="#about" class="btn">Discover More</a>
+<a href="#investors" class="btn">Investment Opportunities</a>
+</section><section id="about">
+<h2>About the Company</h2>
 <p><strong>Founder & CEO:</strong> Muhammed Esa Siyam</p>
-<p>MET Global Industries operates with a strategic vision to develop innovative composite materials, engineered solutions, and next-generation industrial products. Our organization is built on technical precision, research-driven development, and scalable business models designed for global expansion.</p>
-<p>We focus on manufacturing excellence, quality control systems, advanced material science, and sustainable production methodologies. Our leadership is committed to integrity, transparency, and long-term industrial impact.</p><div class="gallery">
-<img src="met1.jpg" alt="Manufacturing Unit">
-<img src="met2.jpg" alt="Production Process">
-<img src="met3.jpg" alt="Industrial Equipment">
-<img src="met4.jpg" alt="Final Product">
+<p>MET Global Industries was established with a mission to build sustainable, high-strength engineered products capable of serving industrial, commercial, and infrastructure markets. The company operates on structured manufacturing systems, quality validation frameworks, and performance optimization techniques.</p>
+<p>Our vision is to become a globally recognized industrial leader by integrating innovation, sustainability, and advanced engineering into every product we manufacture.</p><div class="about-grid">
+<div class="about-box">
+<h3>Mission</h3>
+<p>To deliver durable, performance-driven composite products through engineering precision and continuous innovation.</p>
 </div>
-</section><section class="section" id="products">
-<h2>Our Products & Solutions</h2>
-<div class="card-container">
-<div class="card">
+<div class="about-box">
+<h3>Core Values</h3>
+<p>Integrity, Technical Excellence, Transparency, Scalable Growth, Long-Term Partnerships.</p>
+</div>
+<div class="about-box">
+<h3>Operational Focus</h3>
+<p>Advanced compression technology, sustainable raw material sourcing, research-based formulation, and scalable production infrastructure.</p>
+</div>
+</div><div class="gallery">
+<img src="met1.jpg" alt="Manufacturing">
+<img src="met2.jpg" alt="Process">
+<img src="met3.jpg" alt="Equipment">
+<img src="met4.jpg" alt="Product">
+</div>
+</section><section id="products" class="products">
+<h2>Products & Engineering Solutions</h2>
+<p>Our product line focuses on composite industrial tiles, engineered rubber materials, and custom manufacturing solutions designed for durability and long-term performance.</p><div class="product-grid">
+<div class="product-card">
+<i class="fa-solid fa-industry"></i>
 <h3>Composite Industrial Tiles</h3>
-<p>High-strength engineered tiles developed using advanced rubber composite technology. Designed for durability, heavy load endurance, and environmental resistance.</p>
+<p>High-compression, load-resistant tiles engineered for industrial environments with enhanced structural integrity and environmental resistance.</p>
+</div><div class="product-card">
+<i class="fa-solid fa-flask"></i>
+<h3>Material Research & Development</h3>
+<p>Continuous innovation in rubber composites and industrial-grade materials to enhance performance metrics and lifespan.</p>
+</div><div class="product-card">
+<i class="fa-solid fa-gears"></i>
+<h3>Custom Manufacturing</h3>
+<p>Tailored production services for scalable commercial and industrial clients requiring optimized engineering solutions.</p>
+</div><div class="product-card">
+<i class="fa-solid fa-earth-asia"></i>
+<h3>Global Expansion Strategy</h3>
+<p>Structured roadmap for national distribution and international export scaling.</p>
 </div>
-<div class="card">
-<h3>Advanced Material Research</h3>
-<p>Continuous R&D initiatives focused on improving mechanical strength, compression resistance, and long-term product stability under industrial conditions.</p>
 </div>
-<div class="card">
-<h3>Custom Manufacturing Solutions</h3>
-<p>Tailored production services for businesses seeking scalable manufacturing with strict quality control and cost efficiency.</p>
+</section><section id="investors" class="investor-section">
+<div class="investor-content">
+<h2><i class="fa-solid fa-chart-line"></i> Investor Partnership Program</h2>
+<p>MET Global Industries welcomes strategic investors and growth partners seeking scalable industrial ventures. We offer structured equity participation models, long-term partnership agreements, and transparent financial structuring.</p>
+<p>Investment focus areas include manufacturing expansion, advanced machinery integration, distribution scaling, and export market development.</p>
+<a href="#" class="investor-btn" onclick="openModal()">View Detailed Investment Proposal</a>
 </div>
-</div>
-</section><section class="section" id="investors">
-<h2><i class="fa-solid fa-chart-line"></i> Investor Opportunities</h2>
-<p>We are actively seeking strategic investors and long-term partners who are interested in scalable industrial ventures. MET Global Industries offers structured partnership models, equity participation opportunities, and collaborative growth strategies.</p>
-<p>Our business roadmap includes capacity expansion, technological upgrades, national distribution networks, and global export potential. Investors joining at this stage benefit from early-stage growth leverage and structured financial returns.</p>
-<a href="#" class="investor-btn" onclick="openModal()">Explore Investment Details</a>
 </section><div class="modal" id="investorModal">
 <div class="modal-content">
 <span class="close" onclick="closeModal()">&times;</span>
-<h3>Investment Partnership Program</h3>
-<p>We welcome equity investors, strategic business partners, and institutional collaborators. Investment opportunities include:</p>
+<h3>Investment Opportunity Overview</h3>
+<p>We are currently considering private investors, institutional collaborators, and strategic partners to accelerate our manufacturing scale and market penetration.</p>
 <ul>
-<li>Manufacturing expansion funding</li>
-<li>Technology & equipment modernization</li>
-<li>Distribution network development</li>
-<li>Export market scaling</li>
-</ul>
-<div class="contact-box">
-<p><strong>Investor Inquiries:</strong></p>
+<li>Equity-Based Investment Partnerships</li>
+<li>Manufacturing Capacity Expansion</li>
+<li>Technology Upgrade & Equipment Modernization</li>
+<li>National Distribution & Export Market Entry</li>
+</ul><p><strong>Investor Inquiry Contact:</strong></p>
 <p>Email: info@metglobalindustries.com</p>
-<p>Contact Number: +91-XXXXXXXXXX</p>
+<p>Phone: +91-XXXXXXXXXX</p>
 </div>
+</div><section id="contact">
+<h2>Contact & Corporate Information</h2>
+<div class="contact-box">
+<p><strong>Company Name:</strong> MET Global Industries</p>
+<p><strong>CEO & Founder:</strong> Muhammed Esa Siyam</p>
+<p><strong>Official Email:</strong> info@metglobalindustries.com</p>
+<p><strong>Vision:</strong> To establish a globally scalable industrial manufacturing ecosystem built on research-driven engineering, strategic partnerships, and long-term value creation.</p>
 </div>
-</div><section class="section" id="contact">
-<h2>Contact Us</h2>
-<p>Company Name: MET Global Industries</p>
-<p>Official Email: info@metglobalindustries.com</p>
-<p>Vision: To become a globally recognized industrial leader by integrating innovation, sustainability, and advanced engineering into every product we manufacture.</p>
 </section><footer>
-<p>&copy; 2026 MET Global Industries | All Rights Reserved</p>
+<p>© 2026 MET Global Industries. All Rights Reserved.</p>
 </footer><script>
 function openModal(){document.getElementById('investorModal').style.display='flex';}
 function closeModal(){document.getElementById('investorModal').style.display='none';}
 window.onclick=function(e){if(e.target==document.getElementById('investorModal')){closeModal();}}
 </script></body>
-  </html>
+</html>
